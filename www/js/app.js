@@ -6,6 +6,8 @@ $$('.orcamentoindexadm').hide();
 $$('.cadastropromocao').hide();
 $$('.estoqueadm').hide();
 $$('.login-screen-open').show();
+$$('.admindex').hide();
+
 
 
 // Framework7 App main instance
@@ -238,16 +240,16 @@ $$('#addButton').on('click', function () {
 $$('#addButtonpromocao').on('click', function () {
   var titulo = $$('#titulo').val();
   var descricao = $$('#descricao').val();
-  var imagem = $$('#imagem').val();
+  var preco = $$('#preco').val();
 
-  var formData = {Titulo: titulo, Descricao: descricao, Imagem: imagem}
+  var formData = {Titulo: titulo, Descricao: descricao, Preco: preco}
   console.log(formData);
   firebase.database().ref().child('estoque').push(formData)
   .then( function () {
     app.dialog.alert('Promoção Efetuado com Sucesso');
     $$('input#titulo').val('');
     $$('input#descricao').val('');
-    $$('input#imagem').val('');
+    $$('input#preco').val('');
   }, function(error){
     app.dialog.alert('Erro, confira o console');
     console.error(error)

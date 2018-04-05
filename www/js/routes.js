@@ -8,6 +8,10 @@ routes = [
     url: './pages/portfolio.html',
   },
   {
+    path: '/adm/',
+    url: './pages/adm.html',
+  },
+  {
     path: '/sobre/',
     url: './pages/sobre.html',
   },

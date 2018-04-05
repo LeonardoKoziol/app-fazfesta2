@@ -19,7 +19,7 @@ function create(name, email, tel, msm){
 
 
 
-var nameInput = document.getElementById('nameInput');
+var nameInput = document.getElementById('name');
 var emailInput = document.getElementById('emailInput');
 var telefoneInput = document.getElementById('telefoneInput');
 var mensagemInput = document.getElementById('mensagemInput');
@@ -28,7 +28,7 @@ var addButton = document.getElementById('addButton');
 
 addButton.addEventListener('click', function(e){
     e.preventDefault();
-    create(nameInput.value, emailInput.value, telefoneInput.value, mensagemInput.value);
+    create(name.value, emailInput.value, telefoneInput.value, mensagemInput.value);
     
 })
 function create(name, email, tel, msm){
