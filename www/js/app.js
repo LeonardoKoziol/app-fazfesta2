@@ -230,7 +230,7 @@ $$('#addButton').on('click', function () {
     $$('input#nome').val('');
     $$('input#emailorcamento').val('');
     $$('input#telefone').val('');
-    $$('input#mensagem').val('');
+    $$('#mensagem').val("");
   }, function(error){
     app.dialog.alert('Erro, confira o console');
     console.error(error)
