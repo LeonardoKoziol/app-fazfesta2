@@ -254,6 +254,7 @@ $$('#addButtonpromocao').on('click', function () {
     app.dialog.alert('Erro, confira o console');
     console.error(error)
   })
+  
 });
 
 
