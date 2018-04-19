@@ -14,7 +14,7 @@ $$('.admindex').hide();
 var app  = new Framework7({
   root: '#app', // App root element
   id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
+  name: 'Seja bem vindo ao app FazFesta', // App name
   theme: 'auto', // Automatic theme detection
   // App root data
   data: function () {
@@ -221,8 +221,9 @@ $$('#addButton').on('click', function () {
   var email = $$('#emailorcamento').val();
   var telefone = $$('#telefone').val();
   var mensagem = $$('#mensagem').val();
+  var local = $$('#local').val();
 
-  var formData = {Nome: nome, Email: email, Telefone: telefone, Mensagem: mensagem}
+  var formData = {Nome: nome, Email: email, Telefone: telefone, Mensagem: mensagem, Local: local}
   console.log(formData);
   firebase.database().ref().child('orcamentos').push(formData)
   .then( function () {
@@ -231,6 +232,7 @@ $$('#addButton').on('click', function () {
     $$('input#emailorcamento').val('');
     $$('input#telefone').val('');
     $$('#mensagem').val("");
+    $$('input#local').val('');
   }, function(error){
     app.dialog.alert('Erro, confira o console');
     console.error(error)
